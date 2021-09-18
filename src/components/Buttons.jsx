@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import CartLogo from '../icons/Cart.svg';
+import CartLogoWhite from '../icons/Cart2.svg';
 
 const StyledButton = styled.button`
     cursor: pointer;
@@ -32,10 +33,31 @@ const StyledCurrencyButton = styled.select`
 `
 
 const StyledCartButton = styled(StyledButton)`
-
     img {
         width: 20px;
         height: 20px;
+    }
+`
+
+const StyledItemCartButton = styled(StyledButton)`
+    position: absolute;
+    bottom: 4.5rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+    width: 52px;
+    height: 52px;
+    background-color: ${props => props.theme.colors.main};
+    border-radius: 50%;
+    transition: 0.5s all;
+    img {
+        width: 25px;
+        height: 25px;
+    }
+    &:hover {
+        background-color: #4da865;
     }
 `
 
@@ -60,5 +82,13 @@ export class CartButton extends Component {
         return <StyledCartButton {...this.props}>
             <img src={CartLogo} alt="Cart" />
         </StyledCartButton>
+    }
+}
+
+export class ItemCardButton extends Component {
+    render() {
+        return <StyledItemCartButton {...this.props}>
+            <img src={CartLogoWhite} alt="Cart" />
+        </StyledItemCartButton>
     }
 }

@@ -14,10 +14,10 @@ const Global = createGlobalStyle`
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0e151c;
+    background: #fff;
   }
   ::-webkit-scrollbar-thumb {
-    background: #0fa36a;
+    background: #5ECE7B;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #13c581;
