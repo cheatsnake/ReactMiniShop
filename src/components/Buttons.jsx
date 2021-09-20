@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import CartLogo from '../icons/Cart.svg';
 import CartLogoWhite from '../icons/Cart2.svg';
+import { Link } from 'react-router-dom';
 
 const StyledButton = styled.button`
     cursor: pointer;
@@ -13,14 +14,30 @@ const StyledButton = styled.button`
     }
 `
 
-const StyledNavButton = styled(StyledButton)`
+const StyledNavButton = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    background-color: inherit;
+    transition: 0.3s all;
     width: 100%;
     height: 80px;
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-        background-color: #f5f5f5;
+        background-color: #f7f7f7;
     }
+    &:focus {
+        outline: none;
+    }
+    ${props => props.active && css`
+        color: ${props => props.theme.colors.main};
+        border-bottom: 3px solid ${props => props.theme.colors.main};
+    `}
 `
 
 const StyledCurrencyButton = styled.select`
@@ -61,7 +78,7 @@ const StyledItemCartButton = styled(StyledButton)`
     }
 `
 
-export class HeaderNavButton extends Component {
+export class NavButton extends Component {
     render() {
         return <StyledNavButton {...this.props}/>
     }
