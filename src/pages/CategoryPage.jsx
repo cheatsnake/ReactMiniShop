@@ -20,9 +20,8 @@ class CategoryPage extends Component {
                 i = 2;
             }
         }
-
         fetchData();
-    
+
         return (
             <>
                 {overlay ? <CartOverlay/> : null}

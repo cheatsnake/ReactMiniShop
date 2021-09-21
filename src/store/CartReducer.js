@@ -4,7 +4,6 @@ const defaultState = {
 
 const TOGGLE = 'TOGGLE'
 
-
 const CartReducer = (state = defaultState, action) => {
     switch (action.type) {
         case TOGGLE:

@@ -78,6 +78,35 @@ const StyledItemCartButton = styled(StyledButton)`
     }
 `
 
+const StyledOptionButton = styled(StyledButton)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    font-size: ${props => props.size || "1rem"};
+    padding: ${props => props.padding || "0.7rem 0.4rem"};
+    line-height: 0rem;
+    margin: ${props => props.margin || 0};
+`
+
+const StyledViewButton = styled(StyledButton)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    font-size: ${props => props.size || "1rem"};
+    padding: ${props => props.padding || "0.7rem 0.5rem"};
+    text-transform: uppercase;
+    font-weight: 600;
+    ${props => props.outlined && css`
+        border: 1px solid black;
+    `}
+    ${props => props.primary && css`
+        color: #fff;
+        background-color: ${props => props.theme.colors.main};
+    `}
+`
+
 export class NavButton extends Component {
     render() {
         return <StyledNavButton {...this.props}/>
@@ -107,5 +136,16 @@ export class ItemCardButton extends Component {
         return <StyledItemCartButton {...this.props}>
             <img src={CartLogoWhite} alt="Cart" />
         </StyledItemCartButton>
+    }
+}
+
+export class OptionButton extends Component {
+    render() {
+        return <StyledOptionButton {...this.props}/>
+    }
+}
+export class ViewButton extends Component {
+    render() {
+        return <StyledViewButton {...this.props}/>
     }
 }

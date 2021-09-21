@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { toggleCartOverlay } from '../store/CartReducer';
 
 const StyledHeader = styled(Flexbox)`
-    max-width: 1250px;
+    max-width: 1230px;
     z-index: 12;
     background-color: #fff;
 `
@@ -25,10 +25,10 @@ class Header extends Component {
 
     render() {
         
-        let {location} = this.props;
+        const {location, toggleOverlay} = this.props;
 
         return (
-            <StyledHeader position="fixed" width="100%" margin="0 auto">
+            <StyledHeader position="fixed" margin="0 auto">
                 <Flexbox position="relative" height="80px" justify="space-between" align="center">
                     <Flexbox width="234px">
 
@@ -49,9 +49,9 @@ class Header extends Component {
 
                     </Flexbox>
                     <StyledLogo src={ShopIcon} alt="Logo"/>
-                    <Flexbox width="110px" justify="space-between">
+                    <Flexbox width="120px" justify="space-between">
                         <CurrencyButton/>
-                        <CartButton/>
+                        <CartButton onClick={toggleOverlay}/>
                     </Flexbox>
                 </Flexbox>
             </StyledHeader>
@@ -59,6 +59,10 @@ class Header extends Component {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggleOverlay: () => dispatch(toggleCartOverlay()),
+    }
+}
 
-
-export default Header;
+export default connect(null, mapDispatchToProps)(Header);

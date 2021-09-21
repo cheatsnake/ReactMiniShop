@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+const StyledTitle = styled.div`
+    font-size: ${props => props.size || "1rem"};
+    line-height: ${props => props.lh || "1rem"};
+    font-weight: ${props => props.weight || 400};
+    margin: ${props => props.margin || 0};
+`
+
 const StyledCategoryTitle = styled.h1`
     font-size: 2.625rem;
     font-weight: 400;
@@ -19,6 +26,12 @@ const StyledItemPrice = styled.h3`
     margin: ${props => props.margin || 0};
 `
 
+
+export class Title extends Component {
+    render() {
+        return <StyledTitle {...this.props}/>
+    }
+}
 export class CategoryTitle extends Component {
     render() {
         return <StyledCategoryTitle {...this.props}/>
