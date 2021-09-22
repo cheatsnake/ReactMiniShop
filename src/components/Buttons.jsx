@@ -93,9 +93,10 @@ const StyledViewButton = styled(StyledButton)`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48%;
+    width: ${props => props.width || "48%"};
     font-size: ${props => props.size || "1rem"};
     padding: ${props => props.padding || "0.7rem 0.5rem"};
+    margin: ${props => props.margin || 0};
     text-transform: uppercase;
     font-weight: 600;
     ${props => props.outlined && css`

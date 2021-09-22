@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { OptionButton } from './Buttons';
 import Flexbox from './Flexbox';
 import ItemImg from './ItemImg';
-import { Title } from './Titles';
+import { Text } from './Titles';
 
 class CartItem extends Component {
     render() {
         return (
             <Flexbox margin="2rem 0 0 0">
                 <Flexbox direction="column" justify="space-between">
-                    <Title weight="300" lh="1.5rem">Nike Running Shoes</Title>
-                    <Title margin=".5rem 0 0 0" weight="500">$50.00</Title>
+                    <Text weight="300" lh="1.5rem">Nike Running Shoes</Text>
+                    <Text margin=".5rem 0 0 0" weight="500">$50.00</Text>
                     <Flexbox margin="2rem 0 0 0">
                         <OptionButton margin="0 0.5rem 0 0" size="0.875rem">S</OptionButton>
                         <OptionButton size="0.875rem">M</OptionButton>

@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import Flexbox from './components/Flexbox';
 import Header from './components/Header';
 import {Switch, Route, Redirect, withRouter} from "react-router-dom";
+import ItemPage from './pages/ItemPage';
+import CartOverlay from './components/CartOverlay';
+import { connect } from 'react-redux';
 
 const StyledContainer = styled(Flexbox)`
     max-width: 1250px;
@@ -33,11 +36,12 @@ class App extends Component {
                 itemCose: "$29.99"
             },
         ];
-
+        const {overlay} = this.props;
         const location = this.props.location.pathname;
 
         return (
-            <StyledContainer direction="column" margin="0 auto" padding="0 1rem 7rem 1rem">
+            <StyledContainer direction="column" margin="0 auto" padding="0 1rem 2rem 1rem">
+                {overlay ? <CartOverlay/> : null}
                 <Header location={location}/>
                 <Switch>
                     <Route path="/women">
@@ -49,6 +53,9 @@ class App extends Component {
                     <Route path="/kids">
                         <CategoryPage location={location} data={data}/>
                     </Route>
+                    <Route path="/item">
+                        <ItemPage location={location} data={data}/>
+                    </Route>
                     <Redirect to="/women"/>
                 </Switch>
             </StyledContainer>
@@ -56,4 +63,10 @@ class App extends Component {
     }
 }
 
-export default withRouter(App);
+const mapStateToProps = (state) => {
+    return {
+        overlay: state.cart.CartOverlay,
+    }
+}
+
+export default connect(mapStateToProps)(withRouter(App));

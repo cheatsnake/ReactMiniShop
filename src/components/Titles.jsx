@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const StyledTitle = styled.div`
+const StyledText = styled.div`
     font-size: ${props => props.size || "1rem"};
-    line-height: ${props => props.lh || "1rem"};
+    line-height: ${props => props.lh || "normal"};
     font-weight: ${props => props.weight || 400};
+    text-transform: ${props => props.transform || "none"};
     margin: ${props => props.margin || 0};
 `
 
@@ -27,9 +28,9 @@ const StyledItemPrice = styled.h3`
 `
 
 
-export class Title extends Component {
+export class Text extends Component {
     render() {
-        return <StyledTitle {...this.props}/>
+        return <StyledText {...this.props}/>
     }
 }
 export class CategoryTitle extends Component {
