@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { OptionButton, ViewButton } from '../components/Buttons';
 import Flexbox from '../components/Flexbox';
 import ItemImg from '../components/ItemImg';
-import { ItemPrice, Text } from '../components/Titles';
+import { Text } from '../components/Titles';
 
 class ItemPage extends Component {
     render() {

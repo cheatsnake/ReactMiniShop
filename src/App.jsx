@@ -7,6 +7,7 @@ import {Switch, Route, Redirect, withRouter} from "react-router-dom";
 import ItemPage from './pages/ItemPage';
 import CartOverlay from './components/CartOverlay';
 import { connect } from 'react-redux';
+import CartPage from './pages/CartPage';
 
 const StyledContainer = styled(Flexbox)`
     max-width: 1250px;
@@ -55,6 +56,9 @@ class App extends Component {
                     </Route>
                     <Route path="/item">
                         <ItemPage location={location} data={data}/>
+                    </Route>
+                    <Route path="/cart">
+                        <CartPage location={location} data={data}/>
                     </Route>
                     <Redirect to="/women"/>
                 </Switch>
