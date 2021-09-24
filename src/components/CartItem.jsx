@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { OptionButton } from './Buttons';
+import { OptionButton, SizeButton } from './Buttons';
 import Flexbox from './Flexbox';
 import ItemImg from './ItemImg';
 import { Text } from './Titles';
@@ -7,9 +7,7 @@ import { Text } from './Titles';
 class CartItem extends Component {
     render() {
 
-        const {nameSize, priceSize, priceWeight, optionBtnSize, optionBtnPadding, imgHeight, imgWidth, width} = this.props;
-
-        console.log(this.props);
+        const {nameSize, priceSize, priceWeight, optionBtnSize, widthBtn, lineHeight, optionBtnPadding, imgHeight, imgWidth, width} = this.props;
 
         return (
             <Flexbox margin="2rem 0 0 0" justify="space-between">
@@ -17,8 +15,8 @@ class CartItem extends Component {
                     <Text weight="300" size={nameSize || "1rem"} lh="1.5rem">Nike Running Shoes</Text>
                     <Text margin=".5rem 0 0 0" size={priceSize || "1rem"} weight={priceWeight || "500"}>$50.00</Text>
                     <Flexbox margin="2rem 0 0 0">
-                        <OptionButton padding={optionBtnPadding} margin="0 0.5rem 0 0" size={optionBtnSize || "0.875rem"}>S</OptionButton>
-                        <OptionButton padding={optionBtnPadding} size={optionBtnSize || "0.875rem"}>M</OptionButton>
+                        <SizeButton lh={lineHeight || "1.75rem"} width={widthBtn || "30px"} fontSize={optionBtnSize || "0.875rem"} size="s"/>
+                        <SizeButton lh={lineHeight || "1.75rem"} width={widthBtn || "30px"} fontSize={optionBtnSize || "0.875rem"} size="m"/>
                     </Flexbox>
                 </Flexbox>
                 <Flexbox width={width || "100%"}>

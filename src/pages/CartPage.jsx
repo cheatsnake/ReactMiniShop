@@ -12,6 +12,7 @@ const StyledBox = styled(Flexbox)`
 
 class CartPage extends Component {
     render() {
+
         return (
             <Flexbox direction="column" margin="80px 0 0 0">
                 <Text margin="4rem 0 0 0" size="2rem" weight="700" transform="uppercase">Cart</Text>
@@ -21,8 +22,10 @@ class CartPage extends Component {
                             nameSize="1.875rem" 
                             priceSize="1.5rem" 
                             priceWeight="700" 
+                            lineHeight="3rem"
+                            widthBtn="50px" 
                             optionBtnSize="1rem"
-                            optionBtnPadding="1.5rem"
+                            optionBtnPadding="1.25rem"
                             imgHeight="185px"
                             imgWidth="140px"
                             width="auto"/>
@@ -31,16 +34,18 @@ class CartPage extends Component {
                         <CartItem 
                             nameSize="1.875rem" 
                             priceSize="1.5rem" 
-                            priceWeight="700" 
+                            priceWeight="700"
+                            lineHeight="3rem"
+                            widthBtn="50px" 
                             optionBtnSize="1rem"
-                            optionBtnPadding="1.5rem"
+                            optionBtnPadding="1.25rem"
                             imgHeight="185px"
                             imgWidth="140px"
                             width="auto"/>
                     </StyledBox>
                 </Flexbox>
                 <Flexbox justify="flex-end">
-                    <ViewButton margin="3rem 0 0 0" width="210px" primary>Check out</ViewButton>
+                    <ViewButton to="/checkout" margin="3rem 0 0 0" width="210px" primary="true">Check out</ViewButton>
                 </Flexbox>
             </Flexbox>
         );

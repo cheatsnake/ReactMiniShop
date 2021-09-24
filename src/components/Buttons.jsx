@@ -89,7 +89,12 @@ const StyledOptionButton = styled(StyledButton)`
     margin: ${props => props.margin || 0};
 `
 
-const StyledViewButton = styled(StyledButton)`
+const StyledViewButton = styled(Link)`
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    text-decoration: none;
+    transition: 0.3s all;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,13 +103,38 @@ const StyledViewButton = styled(StyledButton)`
     padding: ${props => props.padding || "0.7rem 0.5rem"};
     margin: ${props => props.margin || 0};
     text-transform: uppercase;
+    color: #000;
     font-weight: 600;
+    &:focus {
+        outline: none;
+    }
     ${props => props.outlined && css`
         border: 1px solid black;
     `}
     ${props => props.primary && css`
         color: #fff;
         background-color: ${props => props.theme.colors.main};
+    `}
+`
+
+const StyledSizeButton = styled.div`
+    user-select: none; 
+    input {
+        display: none;
+    }
+    label {
+        margin-right: 0.5rem;
+        display: inline-block;
+        width: ${props => props.width || '50px'};
+        height: ${props => props.width || '50px'};
+        text-align: center;
+        border: 2px solid #000000;
+        line-height: ${props => props.lh || '3rem'};
+        font-size: ${props => props.fontSize || '1.25rem'};
+        cursor: pointer;
+    }
+    ${props => props.out && css`
+        opacity: 0.3;
     `}
 `
 
@@ -148,5 +178,38 @@ export class OptionButton extends Component {
 export class ViewButton extends Component {
     render() {
         return <StyledViewButton {...this.props}/>
+    }
+}
+
+export class SizeButton extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isChecked: false,
+        };
+    }
+
+    toggleChange = () => {
+        this.setState({
+            isChecked: !this.state.isChecked,
+        });
+    }
+
+    render() {
+        const { size } = this.props;
+        return (
+            <StyledSizeButton {...this.props}>
+                    <input 
+                        type="radio" 
+                        name={size} 
+                        id={size} 
+                        defaultChecked={this.state.isChecked} 
+                        onClick={this.toggleChange}/>
+                    <label 
+                        style={this.state.isChecked ? {background: "#000", color: "#fff"} : null}
+                        htmlFor={size}>
+                        {size.toUpperCase()}
+                    </label>
+            </StyledSizeButton>)
     }
 }
