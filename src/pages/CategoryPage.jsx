@@ -13,7 +13,7 @@ class CategoryPage extends Component {
                 <CategoryTitle margin="10rem 0 0 0">{data.category}</CategoryTitle>
                 <Gridbox gap="5rem 2rem" margin="5rem 0 4rem 0">
                     {
-                        data.items.map(item => {
+                        data.map(item => {
                             return (
                                 <ItemCard 
                                     key={item.id} 

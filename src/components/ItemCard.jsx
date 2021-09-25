@@ -39,7 +39,7 @@ class ItemCard extends Component {
         }
 
         return (
-            <StyledLink to={{pathname: "/item", state: {propsData: data}}} >
+            <StyledLink to={`/item${data.id}`} >
                 <StyledItemCard position="relative" direction="column" width="auto" padding="1rem">
                     <ItemImg src={data.url}/>
                     <ItemCardButton onClick={(e) => addToCart(e)}/>

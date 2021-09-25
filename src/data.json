@@ -1,35 +1,20 @@
-{
-	"women": {
-		"category": "Women",
-		"items": [
-			{"id": 1, "name": "EQ21 RUN SHOES", "price": 80, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/399939f51d884c4b8612ad1801716a2f_9366/EQ21_Run_Shoes_Pink_H00543.jpg"},
-			{"id": 2, "name": "ULTRABOOST 5.0 DNA SHOES", "price": 45, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e0af9f8d0f594b9cac57ad2f009187bf_9366/Ultraboost_5.0_DNA_Shoes_White_GX3079.jpg"},
-			{"id": 3, "name": "SOLARGLIDE 4 SHOES", "price": 50, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/91a9bfdc693b4968bc89ad5700b20e5f_9366/SolarGlide_4_Shoes_Purple_S42737.jpg"},
-			{"id": 4, "name": "RUNFALCON 2.0 SHOES", "price": 75, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/5c67fef51f7f472aaab0ad4e012e029f_9366/Runfalcon_2.0_Shoes_Pink_H04520.jpg"},
-			{"id": 5, "name": "ULTRA 4D 5.0 SHOES", "price": 39, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/7cf7424efee048139df2acd1013a2b05_9366/Ultra_4D_5.0_Shoes_Grey_G58161.jpg"},
-			{"id": 6, "name": "NARIO MOVE SHOES", "price": 85, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/5ef33327899046d9bc43ad5901061075_9366/Nario_Move_Shoes_Orange_GY3390.jpg"}
-		]
-	},
-	"men": {
-		"category": "Men",
-		"items": [
-			{"id": 7, "name": "ULTRABOOST 5.0 DNA SHOES", "price": 55, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2cfe681d342145ca89f2acb800b374a4_9366/Ultraboost_5.0_DNA_Shoes_Orange_G54961.jpg"},
-			{"id": 8, "name": "EQ21 RUN COLD.RDY SHOES", "price": 65, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/b8f28f623efc4983b4c0ad0a013e2255_9366/EQ21_Run_COLD.RDY_Shoes_Grey_H00495.jpg"},
-			{"id": 9, "name": "EQ21 RUN COLD.RDY SHOES", "price": 90, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/117a3ddf7e5e443b8f13ad0a013e6c70_9366/EQ21_Run_COLD.RDY_Shoes_Black_H00496.jpg"},
-			{"id": 10, "name": "SOLARGLIDE 4 SHOES", "price": 80, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/1f7edf15318645d384eead5700ac6a69_9366/SolarGlide_4_Shoes_Blue_S42732.jpg"},
-			{"id": 11, "name": "ULTRABOOST 20 SHOES", "price": 60, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8b36c5187455401492c9abd501062c22_9366/Ultraboost_20_Shoes_Black_FV8329.jpg"},
-			{"id": 12, "name": "ULTRABOOST 4.0 DNA SHOES", "price": 50, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8c2e06ad8ea7461db753ac1e011923c6_9366/Ultraboost_4.0_DNA_Shoes_Black_FY9318.jpg"}
-		]
-	},
-	"kids": {
-		"category": "Kids",
-		"items": [
-			{"id": 13, "name": "ADIDAS X LEGO SPORT SHOES", "price": 40, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8981ba0ce1bf4438be1cad2b00bb07f0_9366/adidas_x_LEGO(r)_Sport_Shoes_Blue_GX7612.jpg"},
-			{"id": 14, "name": "ADIDAS VENTO BOOST X LEGO SHOES", "price": 30,"url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e58a6755d0804a889f45ad5000fcc01f_9366/adidas_Vento_Boost_x_LEGO(r)_Shoes_Blue_GX5007.jpg"},
-			{"id": 15, "name": "ADIDAS X LEGO SPORT SHOES", "price": 49, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/f90595f8cd0749cdb442ad9100e4bfb7_9366/adidas_x_LEGO(r)_Sport_Shoes_Red_H01504.jpg"},
-			{"id": 16, "name": "DISNEY MICKEY FORTARUN SHOES", "price": 55, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/dfe3778194ed494c86a9ad25010dcd58_9366/Disney_Mickey_FortaRun_Shoes_Burgundy_H68842.jpg"},
-			{"id": 17, "name": "RUNFALCON 2.0 SHOES", "price": 35, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/fd3f58888e0249e69c5bacb800ccfa7e_9366/Runfalcon_2.0_Shoes_Black_GZ7418.jpg"},
-			{"id": 18, "name": "ULTRABOOST 21 SHOES", "price": 29, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/005991553279450892ebad110104ff34_9366/Ultraboost_21_Shoes_Black_GX2561.jpg"}
-		]
-	}
-}
+[
+	{"id": 1, "category": "Women", "name": "EQ21 RUN SHOES", "price": 80, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/399939f51d884c4b8612ad1801716a2f_9366/EQ21_Run_Shoes_Pink_H00543.jpg"},
+	{"id": 2, "category": "Women", "name": "ULTRABOOST 5.0 DNA SHOES", "price": 45, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e0af9f8d0f594b9cac57ad2f009187bf_9366/Ultraboost_5.0_DNA_Shoes_White_GX3079.jpg"},
+	{"id": 3, "category": "Women", "name": "SOLARGLIDE 4 SHOES", "price": 50, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/91a9bfdc693b4968bc89ad5700b20e5f_9366/SolarGlide_4_Shoes_Purple_S42737.jpg"},
+	{"id": 4, "category": "Women", "name": "RUNFALCON 2.0 SHOES", "price": 75, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/5c67fef51f7f472aaab0ad4e012e029f_9366/Runfalcon_2.0_Shoes_Pink_H04520.jpg"},
+	{"id": 5, "category": "Women", "name": "ULTRA 4D 5.0 SHOES", "price": 39, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/7cf7424efee048139df2acd1013a2b05_9366/Ultra_4D_5.0_Shoes_Grey_G58161.jpg"},
+	{"id": 6, "category": "Women", "name": "NARIO MOVE SHOES", "price": 85, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/5ef33327899046d9bc43ad5901061075_9366/Nario_Move_Shoes_Orange_GY3390.jpg"},
+	{"id": 7, "category": "Men", "name": "ULTRABOOST 5.0 DNA SHOES", "price": 55, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2cfe681d342145ca89f2acb800b374a4_9366/Ultraboost_5.0_DNA_Shoes_Orange_G54961.jpg"},
+	{"id": 8, "category": "Men", "name": "EQ21 RUN COLD.RDY SHOES", "price": 65, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/b8f28f623efc4983b4c0ad0a013e2255_9366/EQ21_Run_COLD.RDY_Shoes_Grey_H00495.jpg"},
+	{"id": 9, "category": "Men", "name": "EQ21 RUN COLD.RDY SHOES", "price": 90, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/117a3ddf7e5e443b8f13ad0a013e6c70_9366/EQ21_Run_COLD.RDY_Shoes_Black_H00496.jpg"},
+	{"id": 10, "category": "Men", "name": "SOLARGLIDE 4 SHOES", "price": 80, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/1f7edf15318645d384eead5700ac6a69_9366/SolarGlide_4_Shoes_Blue_S42732.jpg"},
+	{"id": 11, "category": "Men", "name": "ULTRABOOST 20 SHOES", "price": 60, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8b36c5187455401492c9abd501062c22_9366/Ultraboost_20_Shoes_Black_FV8329.jpg"},
+	{"id": 12, "category": "Men", "name": "ULTRABOOST 4.0 DNA SHOES", "price": 50, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8c2e06ad8ea7461db753ac1e011923c6_9366/Ultraboost_4.0_DNA_Shoes_Black_FY9318.jpg"},
+	{"id": 13, "category": "Kids", "name": "ADIDAS X LEGO SPORT SHOES", "price": 40, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8981ba0ce1bf4438be1cad2b00bb07f0_9366/adidas_x_LEGO(r)_Sport_Shoes_Blue_GX7612.jpg"},
+	{"id": 14, "category": "Kids", "name": "ADIDAS VENTO BOOST X LEGO SHOES", "price": 30,"url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e58a6755d0804a889f45ad5000fcc01f_9366/adidas_Vento_Boost_x_LEGO(r)_Shoes_Blue_GX5007.jpg"},
+	{"id": 15, "category": "Kids", "name": "ADIDAS X LEGO SPORT SHOES", "price": 49, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/f90595f8cd0749cdb442ad9100e4bfb7_9366/adidas_x_LEGO(r)_Sport_Shoes_Red_H01504.jpg"},
+	{"id": 16, "category": "Kids", "name": "DISNEY MICKEY FORTARUN SHOES", "price": 55, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/dfe3778194ed494c86a9ad25010dcd58_9366/Disney_Mickey_FortaRun_Shoes_Burgundy_H68842.jpg"},
+	{"id": 17, "category": "Kids", "name": "RUNFALCON 2.0 SHOES", "price": 35, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/fd3f58888e0249e69c5bacb800ccfa7e_9366/Runfalcon_2.0_Shoes_Black_GZ7418.jpg"},
+	{"id": 18, "category": "Kids", "name": "ULTRABOOST 21 SHOES", "price": 29, "url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/005991553279450892ebad110104ff34_9366/Ultraboost_21_Shoes_Black_GX2561.jpg"}
+]
