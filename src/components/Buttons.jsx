@@ -79,6 +79,7 @@ const StyledItemCartButton = styled(StyledButton)`
 `
 
 const StyledOptionButton = styled(StyledButton)`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +88,32 @@ const StyledOptionButton = styled(StyledButton)`
     padding: ${props => props.padding || "0.7rem 0.4rem"};
     line-height: 0rem;
     margin: ${props => props.margin || 0};
+    ${props => props.plus && css`
+        ::after {
+            content: " ";
+            display: block;
+            background-color: #000;
+            height: 1px;
+            width: 15px;
+        }
+        ::before {
+            content: " ";
+            position: absolute;
+            display: block;
+            background-color: #000;
+            width: 1px;
+            height: 15px;
+        }
+    `}
+    ${props => props.minus && css`
+        ::after {
+            content: " ";
+            display: block;
+            background-color: #000;
+            height: 1px;
+            width: 15px;
+        }
+    `}
 `
 
 const StyledViewButton = styled(Link)`
@@ -135,6 +162,7 @@ const StyledSizeButton = styled.div`
     }
     ${props => props.out && css`
         opacity: 0.3;
+        pointer-events: none;
     `}
 `
 

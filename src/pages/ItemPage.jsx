@@ -4,12 +4,14 @@ import Flexbox from '../components/Flexbox';
 import ItemImg from '../components/ItemImg';
 import { Text } from '../components/Titles';
 import ErrorPage from './ErrorPage';
+import { connect } from 'react-redux';
+import { addToCartReducer } from '../store/CartReducer';
 
 export class ItemPage extends Component {
 
     render() {
 
-        const {itemId, data} = this.props;
+        const {itemId, data, addToCartReducer} = this.props;
         const item = data.find(item => item.id === +itemId);
 
         if (!item) {
@@ -36,8 +38,8 @@ export class ItemPage extends Component {
                         <SizeButton size="l"/>
                     </Flexbox>
                     <Text size="1.125rem" transform="uppercase" weight="700" margin="2rem 0 0 0">Price:</Text>
-                    <Text size="1.5rem" weight="700" margin="1rem 0 0 0">${item.price}.00</Text>
-                    <ViewButton to="/cart" width="100%" primary="true" margin="1.5rem 0 0 0">Add to cart</ViewButton>
+                    <Text size="1.5rem" weight="700" margin="1rem 0 0 0">${item.price.toFixed(2)}</Text>
+                    <ViewButton onClick={() => addToCartReducer([item])} to="/cart" width="100%" primary="true" margin="1.5rem 0 0 0">Add to cart</ViewButton>
                     <Text margin="2rem 0 0 0">
                     Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.
                     </Text>
@@ -47,4 +49,10 @@ export class ItemPage extends Component {
     }
 }
 
-export default ItemPage;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCartReducer: (payload) => dispatch(addToCartReducer(payload)),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ItemPage);

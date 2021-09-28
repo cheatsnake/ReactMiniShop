@@ -44,7 +44,7 @@ class App extends Component {
                             return <ItemPage itemId={id} data={data} />
                         }
                     }/>
-                    <Route path="/cart">
+                    <Route path="/cart" >
                         <CartPage location={location} data={data}/>
                     </Route>
                     <Redirect to="/women"/>

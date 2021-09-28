@@ -19,7 +19,7 @@ const StyledContainer = styled(Flexbox)`
 `
 
 const StyledCartWindow = styled(Flexbox)`
-    max-width: 325px;
+    width: 325px;
     align-self: flex-end;
     background-color: #fff;
     max-height: 540px;
@@ -37,20 +37,37 @@ const StyledItemBlock = styled(Flexbox)`
 
 class CartOverlay extends Component {
     render() {
-        const {toggleOverlay} = this.props;
+        const {toggleOverlay, cartItems} = this.props;
+
+        const onClose = (e) => {
+            if (e.target.parentNode.parentNode.parentNode.id === 'root') {
+                toggleOverlay();
+            }
+        }
 
         return (
-            <StyledOverlay position="fixed" height="calc(100vh - 80px)">
+            <StyledOverlay onClick={e => onClose(e)} position="fixed" height="calc(100vh - 80px)">
                 <StyledContainer direction="column" margin="0 auto">
                     <StyledCartWindow direction="column" width="auto" height="auto" padding="1rem">
-                        <Text><b>My Bag</b>, 2 items</Text>
+                        <Text margin="0 0 1rem 0"><b>My Bag</b>, {cartItems.length} items</Text>
                         <StyledItemBlock direction="column">
-                            <CartItem/>
+                            {
+                                cartItems.length ? cartItems.map(item => {
+                                    return <CartItem key={item.id} item={item}/>
+                                })
+                                : <Text margin="0.5rem 0 0 0" weight="300" size="1.5rem">Your bag is empty.</Text>
+                            }
                         </StyledItemBlock>
-                        <Flexbox justify="space-between" margin="3rem 0 0 0">
-                            <Text weight="700">Total</Text>
-                            <Text weight="700">$100.00</Text>
-                        </Flexbox>
+                        {
+                            cartItems.length ? 
+                            (
+                            <Flexbox justify="space-between" margin="1rem 0 0 0">
+                                <Text weight="700">Total</Text>
+                                <Text weight="700">${cartItems.reduce((total, current) => total + current.price, 0).toFixed(2)}</Text>
+                            </Flexbox>
+                            )
+                            : null
+                        }
                         <Flexbox justify="space-between" margin="2rem 0 0 0">
                             <ViewButton to="/cart" onClick={toggleOverlay} size="0.875rem" outlined="true">View Bag</ViewButton>
                             <ViewButton to="/checkout" onClick={toggleOverlay} size="0.875rem" primary="true">Check out</ViewButton>
@@ -62,10 +79,16 @@ class CartOverlay extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        cartItems: state.cart.CartItems,
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         toggleOverlay: () => dispatch(toggleCartOverlay()),
     }
 }
 
-export default connect(null, mapDispatchToProps)(CartOverlay);
+export default connect(mapStateToProps, mapDispatchToProps)(CartOverlay);

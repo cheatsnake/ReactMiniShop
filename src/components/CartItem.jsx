@@ -7,13 +7,14 @@ import { Text } from './Titles';
 class CartItem extends Component {
     render() {
 
-        const {nameSize, priceSize, priceWeight, optionBtnSize, widthBtn, lineHeight, optionBtnPadding, imgHeight, imgWidth, width} = this.props;
+        const {item} = this.props; 
+        const {paddingUp, nameSize, priceSize, priceWeight, optionBtnSize, widthBtn, lineHeight, optionBtnPadding, imgHeight, imgWidth, width} = this.props;
 
         return (
-            <Flexbox margin="2rem 0 0 0" justify="space-between">
+            <Flexbox margin={paddingUp || "0 0 2rem 0"} justify="space-between">
                 <Flexbox direction="column" justify="space-between">
-                    <Text weight="300" size={nameSize || "1rem"} lh="1.5rem">Nike Running Shoes</Text>
-                    <Text margin=".5rem 0 0 0" size={priceSize || "1rem"} weight={priceWeight || "500"}>$50.00</Text>
+                    <Text weight="300" size={nameSize || "1rem"} lh="1.5rem">{item.name}</Text>
+                    <Text margin=".5rem 0 0 0" size={priceSize || "1rem"} weight={priceWeight || "500"}>${item.price.toFixed(2)}</Text>
                     <Flexbox margin="2rem 0 0 0">
                         <SizeButton lh={lineHeight || "1.75rem"} width={widthBtn || "30px"} fontSize={optionBtnSize || "0.875rem"} size="s"/>
                         <SizeButton lh={lineHeight || "1.75rem"} width={widthBtn || "30px"} fontSize={optionBtnSize || "0.875rem"} size="m"/>
@@ -21,11 +22,11 @@ class CartItem extends Component {
                 </Flexbox>
                 <Flexbox width={width || "100%"}>
                     <Flexbox direction="column" justify="space-between" align="center" margin="0 0.7rem 0 0">
-                        <OptionButton padding={optionBtnPadding} size={optionBtnSize || "0.875rem"}>+</OptionButton>
+                        <OptionButton plus padding={optionBtnPadding} size={optionBtnSize || "0.875rem"}></OptionButton>
                         <Text weight={priceWeight} size={priceSize}>1</Text>
-                        <OptionButton padding={optionBtnPadding} size={optionBtnSize || "0.875rem"}>-</OptionButton>
+                        <OptionButton minus padding={optionBtnPadding} size={optionBtnSize || "0.875rem"}></OptionButton>
                     </Flexbox>
-                    <ItemImg src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/9800a9eaf0da4e0d909bac6300bb18b2_9366/adidas_x_LEGO(r)_Sport_Shoes_Yellow_FY8440_01_standard.jpg" width={imgWidth || "105px"} height={imgHeight || "137px"}/>
+                    <ItemImg src={item.url} width={imgWidth || "105px"} height={imgHeight || "137px"}/>
                 </Flexbox>
             </Flexbox>
         );

@@ -44,7 +44,7 @@ class ItemCard extends Component {
                     <ItemImg src={data.url}/>
                     <ItemCardButton onClick={(e) => addToCart(e)}/>
                     <ItemName margin="2rem 0 0 0">{data.name}</ItemName>
-                    <ItemPrice margin="0.5rem 0 0 0">${data.price}.00</ItemPrice>
+                    <ItemPrice margin="0.5rem 0 0 0">${data.price.toFixed(2)}</ItemPrice>
                 </StyledItemCard>
             </StyledLink>
         );
