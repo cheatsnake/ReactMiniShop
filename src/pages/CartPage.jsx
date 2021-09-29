@@ -18,7 +18,12 @@ class CartPage extends Component {
 
         return (
             <Flexbox direction="column" margin="80px 0 0 0">
-                <Text margin="4rem 0 0 0" size="2rem" weight="700" transform="uppercase">Cart</Text>
+                <Text 
+                    margin="4rem 0 0 0" 
+                    size="2rem" 
+                    weight="700" 
+                    transform="uppercase"
+                    >Cart</Text>
                 <Flexbox direction="column" margin="1rem 0 0 0">
 
                     {
@@ -26,7 +31,7 @@ class CartPage extends Component {
                             return (
                                 <StyledBox key={item.id}>
                                 <CartItem 
-                                    item={item}
+                                    itemId={item.id}
                                     paddingUp="2rem 0 1rem 0"
                                     nameSize="1.875rem" 
                                     priceSize="1.5rem" 
@@ -46,7 +51,12 @@ class CartPage extends Component {
                 {
                     cartItems.length ? (
                         <Flexbox justify="flex-end">
-                            <ViewButton to="/checkout" margin="3rem 0 0 0" width="210px" primary="true">Check out</ViewButton>
+                            <ViewButton 
+                                to="/checkout" 
+                                margin="3rem 0 0 0"
+                                 width="210px" 
+                                 primary="true"
+                                 >Check out</ViewButton>
                         </Flexbox>
                     ) : null
                 }

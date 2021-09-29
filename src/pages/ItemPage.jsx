@@ -39,7 +39,13 @@ export class ItemPage extends Component {
                     </Flexbox>
                     <Text size="1.125rem" transform="uppercase" weight="700" margin="2rem 0 0 0">Price:</Text>
                     <Text size="1.5rem" weight="700" margin="1rem 0 0 0">${item.price.toFixed(2)}</Text>
-                    <ViewButton onClick={() => addToCartReducer([item])} to="/cart" width="100%" primary="true" margin="1.5rem 0 0 0">Add to cart</ViewButton>
+                    <ViewButton 
+                        onClick={() => addToCartReducer([item])} 
+                        to="/cart" 
+                        width="100%" 
+                        primary="true" 
+                        margin="1.5rem 0 0 0"
+                        >Add to cart</ViewButton>
                     <Text margin="2rem 0 0 0">
                     Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.
                     </Text>

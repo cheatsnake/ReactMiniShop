@@ -53,7 +53,7 @@ class CartOverlay extends Component {
                         <StyledItemBlock direction="column">
                             {
                                 cartItems.length ? cartItems.map(item => {
-                                    return <CartItem key={item.id} item={item}/>
+                                    return <CartItem key={item.id} itemId={item.id}/>
                                 })
                                 : <Text margin="0.5rem 0 0 0" weight="300" size="1.5rem">Your bag is empty.</Text>
                             }
@@ -63,14 +63,26 @@ class CartOverlay extends Component {
                             (
                             <Flexbox justify="space-between" margin="1rem 0 0 0">
                                 <Text weight="700">Total</Text>
-                                <Text weight="700">${cartItems.reduce((total, current) => total + current.price, 0).toFixed(2)}</Text>
+                                <Text 
+                                    weight="700"
+                                    >${cartItems.reduce((total, current) => total + current.price * current.count, 0).toFixed(2)}</Text>
                             </Flexbox>
                             )
                             : null
                         }
                         <Flexbox justify="space-between" margin="2rem 0 0 0">
-                            <ViewButton to="/cart" onClick={toggleOverlay} size="0.875rem" outlined="true">View Bag</ViewButton>
-                            <ViewButton to="/checkout" onClick={toggleOverlay} size="0.875rem" primary="true">Check out</ViewButton>
+                            <ViewButton 
+                                to="/cart" 
+                                onClick={toggleOverlay} 
+                                size="0.875rem" 
+                                outlined="true"
+                                >View Bag</ViewButton>
+                            <ViewButton 
+                                to="/checkout" 
+                                onClick={toggleOverlay} 
+                                size="0.875rem" 
+                                primary="true"
+                                >Check out</ViewButton>
                         </Flexbox>
                     </StyledCartWindow>
                 </StyledContainer>
