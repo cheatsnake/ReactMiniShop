@@ -31,7 +31,6 @@ const CartReducer = (state = defaultState, action) => {
             let copyState = state.CartItems;
             const indexPlus = copyState.findIndex(item => item.id === action.payload.id);
             copyState[indexPlus].count += 1;
-            console.log(copyState);
             return {...state, CartItems: [...copyState]}
         case DEC_ITEM_CART:
             let newState = state.CartItems;
@@ -41,7 +40,6 @@ const CartReducer = (state = defaultState, action) => {
             } else {
                 newState[indexMinus].count -= 1;
             }
-            console.log(newState);
             return {...state, CartItems: [...newState]}
         default:
             return state;

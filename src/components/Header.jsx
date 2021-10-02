@@ -25,7 +25,7 @@ class Header extends Component {
 
     render() {
         
-        const {location, toggleOverlay} = this.props;
+        const {location, toggleOverlay, count} = this.props;
 
         return (
             <StyledHeader position="fixed" margin="0 auto">
@@ -51,7 +51,10 @@ class Header extends Component {
                     <StyledLogo src={ShopIcon} alt="Logo"/>
                     <Flexbox width="120px" justify="space-between">
                         <CurrencyButton/>
-                        <CartButton onClick={toggleOverlay}/>
+                        {
+                            count ? <CartButton onClick={toggleOverlay} opacity="100" count={count}/>
+                            : <CartButton onClick={toggleOverlay} opacity="0" count={count}/>
+                        }
                     </Flexbox>
                 </Flexbox>
             </StyledHeader>

@@ -17,6 +17,8 @@ class CartItem extends Component {
 
         const item = cartItems.find(item => item.id === itemId);
 
+        if(!cartItems.length || !item) return null;    
+
         return (
             <Flexbox margin={paddingUp || "0 0 2rem 0"} justify="space-between">
                 <Flexbox direction="column" justify="space-between">

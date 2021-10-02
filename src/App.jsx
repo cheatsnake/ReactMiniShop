@@ -17,17 +17,29 @@ const StyledContainer = styled(Flexbox)`
 class App extends Component {
     render() {
 
-        const {overlay} = this.props;
+        const {overlay, cartItems} = this.props;
         const location = this.props.location.pathname;
 
         function filteredData(arr, param) {
             return arr.filter(elem => elem.category === param); 
         }
 
+        function countCartItems(items) {
+            let count = 0;
+            if (!items.length) {
+                return count;
+            } else {
+                items.forEach(items => {
+                    count += items.count;
+                })
+                return count;
+            }
+        }
+
         return (
             <StyledContainer direction="column" margin="0 auto" padding="0 1rem 2rem 1rem">
                 {overlay ? <CartOverlay/> : null}
-                <Header location={location}/>
+                <Header location={location} count={countCartItems(cartItems)}/>
                 <Switch>
                     <Route path="/women">
                         <CategoryPage location={location} data={filteredData(data, 'Women')}/>
@@ -57,6 +69,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
     return {
         overlay: state.cart.CartOverlay,
+        cartItems: state.cart.CartItems,
     }
 }
 

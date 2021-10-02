@@ -50,9 +50,25 @@ const StyledCurrencyButton = styled.select`
 `
 
 const StyledCartButton = styled(StyledButton)`
+    position: relative;
     img {
         width: 20px;
         height: 20px;
+    }
+    div {
+        opacity: ${props => props.opacity || 0};
+        top: -15px;
+        right: -15px;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: #000;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 22px;
+        transition: 0.5s all;
     }
 `
 
@@ -114,6 +130,9 @@ const StyledOptionButton = styled(StyledButton)`
             width: 15px;
         }
     `}
+    &:hover {
+        transform: scale(1.05);
+    }
 `
 
 const StyledViewButton = styled(Link)`
@@ -146,6 +165,7 @@ const StyledViewButton = styled(Link)`
 
 const StyledSizeButton = styled.div`
     user-select: none; 
+    transition: 0.3s all;
     input {
         display: none;
     }
@@ -159,6 +179,9 @@ const StyledSizeButton = styled.div`
         line-height: ${props => props.lh || '3rem'};
         font-size: ${props => props.fontSize || '1.25rem'};
         cursor: pointer;
+    }
+    &:hover {
+        transform: scale(1.05);
     }
     ${props => props.out && css`
         opacity: 0.3;
@@ -186,6 +209,7 @@ export class CartButton extends Component {
     render() {
         return <StyledCartButton {...this.props}>
             <img src={CartLogo} alt="Cart" />
+            <div>{this.props.count}</div>
         </StyledCartButton>
     }
 }
