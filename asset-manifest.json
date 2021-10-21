@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/cheatsnake/ReactMiniShop/static/js/main.9bf626c8.chunk.js",
+    "main.js.map": "/cheatsnake/ReactMiniShop/static/js/main.9bf626c8.chunk.js.map",
+    "runtime-main.js": "/cheatsnake/ReactMiniShop/static/js/runtime-main.db0d3978.js",
+    "runtime-main.js.map": "/cheatsnake/ReactMiniShop/static/js/runtime-main.db0d3978.js.map",
+    "static/js/2.e120adbe.chunk.js": "/cheatsnake/ReactMiniShop/static/js/2.e120adbe.chunk.js",
+    "static/js/2.e120adbe.chunk.js.map": "/cheatsnake/ReactMiniShop/static/js/2.e120adbe.chunk.js.map",
+    "index.html": "/cheatsnake/ReactMiniShop/index.html",
+    "static/js/2.e120adbe.chunk.js.LICENSE.txt": "/cheatsnake/ReactMiniShop/static/js/2.e120adbe.chunk.js.LICENSE.txt",
+    "static/media/Cart.d1995367.svg": "/cheatsnake/ReactMiniShop/static/media/Cart.d1995367.svg",
+    "static/media/Cart2.65b5063f.svg": "/cheatsnake/ReactMiniShop/static/media/Cart2.65b5063f.svg",
+    "static/media/logo.e2b3f410.svg": "/cheatsnake/ReactMiniShop/static/media/logo.e2b3f410.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db0d3978.js",
+    "static/js/2.e120adbe.chunk.js",
+    "static/js/main.9bf626c8.chunk.js"
+  ]
+}
