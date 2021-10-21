@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# React mini shop
+
+[![N|Solid](https://i.ibb.co/PxTMPJ9/btn.png)](https://cheatsnake.github.io/ReactMiniShop)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
