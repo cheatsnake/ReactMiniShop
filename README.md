@@ -1,6 +1,6 @@
 # React mini shop
 
-[![N|Solid](https://i.ibb.co/PxTMPJ9/btn.png)](https://cheatsnake.github.io/ReactMiniShop)
+[![N|Solid](https://i.ibb.co/PxTMPJ9/btn.png)](react-mini-shop.herokuapp.com/)
 
 This project was bootstrapped with [Create React App](https://react-mini-shop.herokuapp.com).
 
